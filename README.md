@@ -24,6 +24,10 @@ npm start
 
 Open `http://localhost:3000`. Add client accounts from the Admin dashboard. Client passwords are set by the administrator during account creation; arrange delivery through a secure out-of-band channel. Do not use real customer data for a demo.
 
+### Current local demo administrator
+
+The local workspace has an administrator account with email `vaultpay.admin@localhost.test`. This is a demo login identifier, not a real email mailbox. Its generated password was provided directly to the workspace owner; it is intentionally not repeated in this tracked README or committed to source control. Use the password manager or private credential record where you saved it. If it has been lost, create a new local database and seed a new administrator using the steps above. Never reuse this demo login or its password in production.
+
 ## Environment variables
 
 | Variable | Purpose | Exposure |
@@ -74,3 +78,5 @@ This scaffold is not verified for production deployment or multi-instance/high-a
 The client uses a short-lived JWT in `sessionStorage` to survive page navigation. Backend authorization is independently enforced on every protected API request. This is a minimal authentication foundation; production account recovery, password reset, MFA, audit retention, administrative account lifecycle controls, and security monitoring are not included.
 
 Stripe and SMTP credentials, provider dashboard configuration, public hosting, real endpoint delivery, and actual test Checkout completion were unavailable during implementation and remain unverified. Never use live-mode Stripe credentials or real payment cards for demonstration.
+
+# Vaultpay
